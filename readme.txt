@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 Freight train tracker
 
 Semi-real time freight train predictor of freight trains passing through Slovenia. 
@@ -64,4 +63,4 @@ Map and approximate positions of train tracks for the European freight train cor
 To do (work in progress):
 More accurate train tracks fixed on their real positions
 Specifications of the cargo, length and weight of the trains
->>>>>>> 14fb3f4a7166be88513b1d7903a877d5f805ed2c
+
