@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <style>
+        #map {position: absolute; top: 0; bottom: 0; left: 0; right:0;}
+    </style>
+</head>
+<body>
+    <div id = "map" ></div>
+
+    <script>
+
+        //setup za zemljevid
+        var map = L.map('map').setView([46.0569, 14.5058], 9);
+        var corner1 = [45.4, 13.3]
+        var corner2 = [46.9, 16.6]   
+        bounds = L.latLngBounds(corner1, corner2)
+        map.setMaxBounds(bounds)
+        map.setMinZoom(8);
+        map.setMaxZoom(14);
+
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+            attribution: '&copy; OpenStreetMap & CARTO'
+        }).addTo(map);
+
+        //stations 
+        const stations = [
+            { name: "Ljubljana",              lat: 46.0569, lon: 14.5058 },
+            { name: "Dobova",                 lat: 45.9019, lon: 15.6561 },
+            { name: "Divača",                 lat: 45.6836, lon: 13.9664 },
+            { name: "Koper Tovorna",          lat: 45.5542, lon: 13.7378 },
+            { name: "Sežana",                 lat: 45.7039, lon: 13.8742 },
+            { name: "Villa Opicina",          lat: 45.7150, lon: 13.8483 },
+            { name: "Hodos",                  lat: 46.8197, lon: 16.3261 },
+            { name: "Maribor Tezno",          lat: 46.5456, lon: 15.6811 },
+            { name: "Pragersko",              lat: 46.3956, lon: 15.6644 },
+            { name: "Celje",                  lat: 46.2308, lon: 15.2681 },
+            { name: "Jesenice",               lat: 46.4339, lon: 14.0572 },
+            { name: "Spielfeld (SLO border)", lat: 46.7167, lon: 15.6333 },
+        ];
+
+        stations.forEach(s => {
+            L.marker([s.lat, s.lon]).addTo(map).bindPopup(s.name);
+        });        
+
+        const LJ = [46.0569, 14.5058]; //ljubljana
+        const KP = [45.5542, 13.7378]; //koper
+        const DV = [45.6836, 13.9664]; //divaca
+        const CLJ = [46.2308, 15.2681]; //celje
+        const PRAG = [46.3956, 15.6644]; //pragersko
+        const HOD = [46.8197, 16.3261]; //hodos
+        const MAR = [46.5456, 15.6811]; //maribor
+        const SPIEL = [46.7167, 15.6333]; //spielfeld
+        const DOB = [45.9019, 15.6561]; //dobova
+        const JES = [46.4339, 14.0572]; //jesenice
+        const SEZ = [45.7039, 13.8742]; //sezana
+        const OPC = [45.7150, 13.8483]; //villa opcina?
+
+        // BALTIC-ADRIATIC
+        L.polyline([KP, DV, LJ, CLJ, PRAG, HOD], { color: 'blue', weight: 10 }).addTo(map);
+        L.polyline([PRAG, MAR, SPIEL], { color: 'blue', weight: 10 }).addTo(map);
+
+        // WEST BALKANS
+        L.polyline([KP, DV, LJ, DOB], { color: 'red', weight: 10 }).addTo(map);
+        L.polyline([JES, LJ, DOB], { color: 'orange', weight: 6 }).addTo(map);
+
+        // MEDITERRANEAN
+        L.polyline([KP, DV, SEZ, OPC], { color: 'green', weight: 6 }).addTo(map);
+        L.polyline([KP, DV, LJ, CLJ, PRAG, HOD], { color: 'green', weight: 6 }).addTo(map);
+        L.polyline([KP, SEZ, LJ], { color: 'green', weight: 6 }).addTo(map);
+        L.polyline([LJ, HOD], { color: 'green', weight: 6 }).addTo(map);
+
+        // thin on top
+        L.polyline([KP, DV, LJ, CLJ, PRAG, HOD], { color: 'blue', weight: 2 }).addTo(map);
+        L.polyline([PRAG, MAR, SPIEL], { color: 'blue', weight: 2 }).addTo(map);
+        L.polyline([KP, DV, LJ, DOB], { color: 'red', weight: 2 }).addTo(map);
+        L.polyline([JES, LJ, DOB], { color: 'orange', weight: 2 }).addTo(map);
+        L.polyline([KP, DV, SEZ, OPC], { color: 'green', weight: 2 }).addTo(map);
+        L.polyline([KP, DV, LJ, CLJ, PRAG, HOD], { color: 'green', weight: 2 }).addTo(map);
+
+        let arrTime = 0;
+        let depTime = 0;
+        let travelTime = 0;
+        const days = ['Su','Mo','Tu','We','Th','Fr','Sa'];       
+        let trainMarkers = []; 
+         
+        //updating positions
+        fetch('./paps.json')
+            .then(res => res.json())
+            .then(data => {
+
+            trainMarkers = data.paps.map((pap) => L.circleMarker([0, 0], {
+                radius: 8,
+                color: 'white',
+                fillColor: pap.color ?? 'black', //if null use black
+                fillOpacity: 0,
+                opacity: 0,
+                weight: 2
+            })
+
+            //tle pomeni ${ss} insert variable here
+            .bindPopup(`
+                Unique id: ${pap.pap_id}
+                Direction: ${pap.direction} 
+                Origin: ${pap.origin}
+                Destination: ${pap.destination}
+            `)
+            .addTo(map));
+
+            // takoj enkrat poženemo
+            updateTrains(data);
+            // potem pa vsake 15 sekund
+            setInterval(() => updateTrains(data), 5000);
+        });
+
+
+        function updateTrains(data) {
+            console.log("updateTrains called, paps:", data.paps.length);
+
+            for (let i = 0; i < data.paps.length; i++) { //loop skozi route
+                var dayInWeek = days[new Date().getDay()];
+                var hourReal = new Date().getHours()
+                var minuteReal = new Date().getMinutes()
+                var secondReal = new Date().getSeconds() //to se updata usakic ko pridemo na nov pap ne stat
+                let realTimeInSeconds = hourReal*3600 + minuteReal*60 + secondReal
+
+                let firstBest = -1;
+                let secondBest = 86400; //second best time tistega papsa torej spodnja meja
+                let lowerJ = -1; 
+                let upperJ = -1 //index zg in sp meje
+
+                if (!data.paps[i].running_days || !data.paps[i].running_days.includes(dayInWeek)) {
+                    continue;
+                }
+                console.log("pap running today:", data.paps[i].pap_id, "realTime:", realTimeInSeconds);
+
+                for (let j = 0; j < data.paps[i].stations.length; j++) { //loop skozi statione enega routa
+                    console.log("lowerJ:", lowerJ, "upperJ:", upperJ, "firstBest:", firstBest, "secondBest:", secondBest);
+                    let sec = 0;
+                    let strarr = data.paps[i].stations[j].arrival
+                    let strdep = data.paps[i].stations[j].departure
+                    let timeStr = strdep ?? strarr; //fix ce arrival je null
+                    if (!timeStr) continue;
+
+                    const [hour, minute] = timeStr.split(":")
+
+                    if (timeStr.includes("+")) {
+                        const [minutes, extraday] = minute.split("+")    
+                        sec = Number(hour)*3600 + Number(minutes)*60 + 86400 //torej tle je nov dan 
+                    } else {
+                        sec = Number(hour) * 3600 + Number(minute)*60 //sekunde tega dneva
+                    }
+
+                    if (sec <= realTimeInSeconds && sec > firstBest) {
+                        firstBest = sec;
+                        lowerJ = j;
+                    }
+                    if (sec >= realTimeInSeconds && sec < secondBest) {
+                        secondBest = sec;
+                        upperJ = j;
+                    }
+
+                }
+
+                if (lowerJ !== -1 && upperJ !== -1) {
+                    let progress = (realTimeInSeconds - firstBest) / (secondBest - firstBest)
+                    let lat = data.paps[i].stations[lowerJ].latitude + (data.paps[i].stations[upperJ].latitude - data.paps[i].stations[lowerJ].latitude) * progress
+                    let lon = data.paps[i].stations[lowerJ].longitude + (data.paps[i].stations[upperJ].longitude - data.paps[i].stations[lowerJ].longitude) * progress
+                    trainMarkers[i].setLatLng([lat, lon]) 
+                    trainMarkers[i].setStyle({ fillOpacity: 1, opacity: 1 })
+                } else {
+                    trainMarkers[i].setStyle({ fillOpacity: 0, opacity: 0 })
+                }
+                //updatamo pikico vlaka
+            }
+        }
+            
+    </script>
+</body>
+</html>

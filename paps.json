@@ -1,0 +1,2060 @@
+{
+  "metadata": {
+    "description": "Pre-arranged Train Paths (PaPs) passing through Slovenia - Timetables 2026/2027",
+    "sources": [
+      "WB_intermediate (AWB RFC7)",
+      "MED_intermediate (RFC6 Mediterranean East)",
+      "BA_intermediate.txt (RFC5 Baltic-Adriatic)"
+    ],
+    "corridors": {
+      "AWB": "Rail Freight Corridor 7 - Orient/East-Med (AWB)",
+      "RFC5": "Rail Freight Corridor 5 - Baltic-Adriatic",
+      "RFC6": "Rail Freight Corridor 6 - Mediterranean (Eastern)"
+    },
+    "day_codes": {
+      "Mo": 1,
+      "Tu": 2,
+      "We": 3,
+      "Th": 4,
+      "Fr": 5,
+      "Sa": 6,
+      "Su": 7
+    }
+  },
+  "paps": [
+    {
+      "unique_id_direction": "AWB-NP7-LjRu4-NS",
+      "pap_id": "AWB-NP7-LjRu4",
+      "national_train_ids": {
+        "SZ-I": "60127",
+        "HZ-I": "70913",
+        "IZS": "73001"
+      },
+      "corridor": "AWB (RFC7)",
+      "direction": "N-S",
+      "origin": "Ljubljana Zalog",
+      "destination": "Ruma",
+      "status": "Regular AWB RFC PaP",
+      "running_days": [
+        "We",
+        "Su"
+      ],
+      "running_days_note": "Wednesday and Sunday",
+      "stations": [
+        {
+          "name": "Ljubljana Zalog",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": null,
+          "departure": "08:42",
+          "latitude": 46.0569,
+          "longitude": 14.5058
+        },
+        {
+          "name": "Dobova",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "10:18",
+          "departure": "11:55",
+          "latitude": 45.9019,
+          "longitude": 15.6561
+        },
+        {
+          "name": "Savski Marof",
+          "country": "Croatia",
+          "im": "HZ-I",
+          "arrival": null,
+          "departure": "12:04",
+          "latitude": 45.9011,
+          "longitude": 15.9731
+        },
+        {
+          "name": "Zagreb RK",
+          "country": "Croatia",
+          "im": "HZ-I",
+          "arrival": "12:45",
+          "departure": "13:34",
+          "latitude": 45.815,
+          "longitude": 15.9819
+        },
+        {
+          "name": "Tovarnik",
+          "country": "Croatia",
+          "im": "HZ-I",
+          "arrival": "21:14",
+          "departure": "22:44",
+          "latitude": 45.1556,
+          "longitude": 19.165
+        },
+        {
+          "name": "Šid",
+          "country": "Serbia",
+          "im": "IZS",
+          "arrival": "22:54",
+          "departure": "01:46+1",
+          "latitude": 45.1225,
+          "longitude": 19.2278
+        },
+        {
+          "name": "Ruma",
+          "country": "Serbia",
+          "im": "IZS",
+          "arrival": "02:30+1",
+          "departure": null,
+          "latitude": 44.9972,
+          "longitude": 19.8214
+        }
+      ]
+    },
+    {
+      "unique_id_direction": "AWB-NP7-LjRu6-NS",
+      "pap_id": "AWB-NP7-LjRu6",
+      "national_train_ids": {
+        "SZ-I": "60127",
+        "HZ-I": "70913",
+        "IZS": "73001"
+      },
+      "corridor": "AWB (RFC7)",
+      "direction": "N-S",
+      "origin": "Ljubljana Zalog",
+      "destination": "Ruma",
+      "status": "Regular AWB RFC PaP",
+      "running_days": [
+        "Mo",
+        "Tu",
+        "We",
+        "Th",
+        "Fr",
+        "Sa",
+        "Su"
+      ],
+      "running_days_note": "Daily",
+      "stations": [
+        {
+          "name": "Ljubljana Zalog",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": null,
+          "departure": "08:42",
+          "latitude": 46.0569,
+          "longitude": 14.5058
+        },
+        {
+          "name": "Dobova",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "10:18",
+          "departure": "11:55",
+          "latitude": 45.9019,
+          "longitude": 15.6561
+        },
+        {
+          "name": "Savski Marof",
+          "country": "Croatia",
+          "im": "HZ-I",
+          "arrival": null,
+          "departure": "12:04",
+          "latitude": 45.9011,
+          "longitude": 15.9731
+        },
+        {
+          "name": "Zagreb RK",
+          "country": "Croatia",
+          "im": "HZ-I",
+          "arrival": "12:45",
+          "departure": "13:34",
+          "latitude": 45.815,
+          "longitude": 15.9819
+        },
+        {
+          "name": "Tovarnik",
+          "country": "Croatia",
+          "im": "HZ-I",
+          "arrival": "21:14",
+          "departure": "22:44",
+          "latitude": 45.1556,
+          "longitude": 19.165
+        },
+        {
+          "name": "Šid",
+          "country": "Serbia",
+          "im": "IZS",
+          "arrival": "22:54",
+          "departure": "01:46+1",
+          "latitude": 45.1225,
+          "longitude": 19.2278
+        },
+        {
+          "name": "Ruma",
+          "country": "Serbia",
+          "im": "IZS",
+          "arrival": "02:30+1",
+          "departure": null,
+          "latitude": 44.9972,
+          "longitude": 19.8214
+        }
+      ]
+    },
+    {
+      "unique_id_direction": "AWB-BA-MED-NP7-LjZg-NS",
+      "pap_id": "AWB-BA-MED-NP7-LjZg",
+      "national_train_ids": {
+        "SZ-I": "60131",
+        "HZ-I": "70931"
+      },
+      "corridor": "AWB (RFC7) / RFC5 BA / RFC6 MED",
+      "direction": "N-S",
+      "origin": "Ljubljana Zalog",
+      "destination": "Zagreb RK",
+      "status": "Regular AWB RFC PaP (Joint offer with RFC BA and RFC MED)",
+      "running_days": [
+        "Sa"
+      ],
+      "running_days_note": "Saturday only",
+      "stations": [
+        {
+          "name": "Ljubljana Zalog",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": null,
+          "departure": "14:17",
+          "latitude": 46.0569,
+          "longitude": 14.5058
+        },
+        {
+          "name": "Dobova",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "16:02",
+          "departure": "17:40",
+          "latitude": 45.9019,
+          "longitude": 15.6561
+        },
+        {
+          "name": "Savski Marof",
+          "country": "Croatia",
+          "im": "HZ-I",
+          "arrival": "17:49",
+          "departure": "17:49",
+          "latitude": 45.9011,
+          "longitude": 15.9731
+        },
+        {
+          "name": "Zagreb RK",
+          "country": "Croatia",
+          "im": "HZ-I",
+          "arrival": "18:22",
+          "departure": null,
+          "latitude": 45.815,
+          "longitude": 15.9819
+        }
+      ]
+    },
+    {
+      "unique_id_direction": "AWB-NP7-WeMa14-NS",
+      "pap_id": "AWB-NP7-WeMa14",
+      "national_train_ids": {
+        "OBB": "41401",
+        "SZ-I": "60100"
+      },
+      "corridor": "AWB (RFC7)",
+      "direction": "N-S",
+      "origin": "Wels",
+      "destination": "Maribor Tezno",
+      "status": "Regular AWB RFC PaP",
+      "running_days": [
+        "Mo",
+        "Tu",
+        "We",
+        "Th",
+        "Fr",
+        "Sa"
+      ],
+      "running_days_note": "Monday to Saturday",
+      "stations": [
+        {
+          "name": "Wels CCT",
+          "country": "Austria",
+          "im": "OBB",
+          "arrival": null,
+          "departure": "01:33",
+          "latitude": 48.1667,
+          "longitude": 14.0333
+        },
+        {
+          "name": "Spielfeld",
+          "country": "Austria/Slovenia border",
+          "im": "OBB/SZ-I",
+          "arrival": "06:22",
+          "departure": "06:51",
+          "latitude": 46.7167,
+          "longitude": 15.6333
+        },
+        {
+          "name": "Maribor Tezno",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "07:22",
+          "departure": null,
+          "latitude": 46.5456,
+          "longitude": 15.6811
+        }
+      ]
+    },
+    {
+      "unique_id_direction": "AWB-RD-NP7-SaLj16-NS",
+      "pap_id": "AWB-RD-NP7-SaLj16",
+      "national_train_ids": {
+        "OBB": "41821",
+        "SZ-I": "60121"
+      },
+      "corridor": "AWB (RFC7) / RFC RD",
+      "direction": "N-S",
+      "origin": "Salzburg Hbf.",
+      "destination": "Ljubljana Moste",
+      "status": "Regular AWB RFC PaP (Joint offer with RFC RD)",
+      "running_days": [
+        "Tu",
+        "We",
+        "Th",
+        "Fr",
+        "Sa"
+      ],
+      "running_days_note": "Tuesday to Saturday",
+      "stations": [
+        {
+          "name": "Salzburg Hbf",
+          "country": "Austria",
+          "im": "OBB",
+          "arrival": null,
+          "departure": "22:35",
+          "latitude": 47.8133,
+          "longitude": 13.0456
+        },
+        {
+          "name": "Salzburg Gnigl",
+          "country": "Austria",
+          "im": "OBB",
+          "arrival": null,
+          "departure": "22:47",
+          "latitude": 47.8111,
+          "longitude": 13.0667
+        },
+        {
+          "name": "Rosenbach",
+          "country": "Austria",
+          "im": "OBB",
+          "arrival": "03:17+1",
+          "departure": "03:17+1",
+          "latitude": 46.5361,
+          "longitude": 13.9978
+        },
+        {
+          "name": "Jesenice",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "03:29+1",
+          "departure": "04:16+1",
+          "latitude": 46.4339,
+          "longitude": 14.0572
+        },
+        {
+          "name": "Ljubljana Moste",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "06:05+1",
+          "departure": null,
+          "latitude": 46.0569,
+          "longitude": 14.5058
+        }
+      ]
+    },
+    {
+      "unique_id_direction": "AWB-BA-MED-NP7-KoZg-NS",
+      "pap_id": "AWB-BA-MED-NP7-KoZg",
+      "national_train_ids": {
+        "SZ-I": "N/A",
+        "HZ-I": "N/A"
+      },
+      "corridor": "AWB (RFC7) / RFC5 BA / RFC6 MED",
+      "direction": "N-S",
+      "origin": "Koper Tovorna",
+      "destination": "Zagreb RK",
+      "status": "Regular AWB RFC PaP (Joint offer with RFC BA and RFC MED)",
+      "running_days": [
+        "Tu",
+        "Th",
+        "Sa"
+      ],
+      "running_days_note": "Tuesday, Thursday, Saturday",
+      "stations": [
+        {
+          "name": "Koper Tovorna",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": null,
+          "departure": "15:35",
+          "latitude": 45.5542,
+          "longitude": 13.7378
+        },
+        {
+          "name": "Divača",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "16:52",
+          "departure": "17:18",
+          "latitude": 45.6836,
+          "longitude": 13.9664
+        },
+        {
+          "name": "Ljubljana Zalog",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "19:19",
+          "departure": "19:48",
+          "latitude": 46.0569,
+          "longitude": 14.5058
+        },
+        {
+          "name": "Dobova",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "21:24",
+          "departure": "22:20",
+          "latitude": 45.9019,
+          "longitude": 15.6561
+        },
+        {
+          "name": "Savski Marof",
+          "country": "Croatia",
+          "im": "HZ-I",
+          "arrival": null,
+          "departure": "22:29",
+          "latitude": 45.9011,
+          "longitude": 15.9731
+        },
+        {
+          "name": "Zagreb RK",
+          "country": "Croatia",
+          "im": "HZ-I",
+          "arrival": "23:00",
+          "departure": null,
+          "latitude": 45.815,
+          "longitude": 15.9819
+        }
+      ]
+    },
+    {
+      "unique_id_direction": "AWB-NP7-RuLj3-SN",
+      "pap_id": "AWB-NP7-RuLj3",
+      "national_train_ids": {
+        "IZS": "73000",
+        "HZ-I": "70912",
+        "SZ-I": "60126"
+      },
+      "corridor": "AWB (RFC7)",
+      "direction": "S-N",
+      "origin": "Ruma",
+      "destination": "Ljubljana Zalog",
+      "status": "Regular AWB RFC PaP",
+      "running_days": [
+        "Mo",
+        "Th"
+      ],
+      "running_days_note": "Monday and Thursday",
+      "stations": [
+        {
+          "name": "Ruma",
+          "country": "Serbia",
+          "im": "IZS",
+          "arrival": null,
+          "departure": "09:36",
+          "latitude": 44.9972,
+          "longitude": 19.8214
+        },
+        {
+          "name": "Šid",
+          "country": "Serbia",
+          "im": "IZS",
+          "arrival": "10:49",
+          "departure": "13:35",
+          "latitude": 45.1225,
+          "longitude": 19.2278
+        },
+        {
+          "name": "Tovarnik",
+          "country": "Croatia",
+          "im": "HZ-I",
+          "arrival": "13:45",
+          "departure": "15:35",
+          "latitude": 45.1556,
+          "longitude": 19.165
+        },
+        {
+          "name": "Zagreb RK",
+          "country": "Croatia",
+          "im": "HZ-I",
+          "arrival": "23:01",
+          "departure": "23:32",
+          "latitude": 45.815,
+          "longitude": 15.9819
+        },
+        {
+          "name": "Savski Marof",
+          "country": "Croatia",
+          "im": "HZ-I",
+          "arrival": null,
+          "departure": "00:12+1",
+          "latitude": 45.9011,
+          "longitude": 15.9731
+        },
+        {
+          "name": "Dobova",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "00:21+1",
+          "departure": "01:21+1",
+          "latitude": 45.9019,
+          "longitude": 15.6561
+        },
+        {
+          "name": "Ljubljana Zalog",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "03:27+1",
+          "departure": null,
+          "latitude": 46.0569,
+          "longitude": 14.5058
+        }
+      ]
+    },
+    {
+      "unique_id_direction": "AWB-NP7-RuLj5-SN",
+      "pap_id": "AWB-NP7-RuLj5",
+      "national_train_ids": {
+        "IZS": "73002",
+        "HZ-I": "70910",
+        "SZ-I": "60128"
+      },
+      "corridor": "AWB (RFC7)",
+      "direction": "S-N",
+      "origin": "Ruma",
+      "destination": "Ljubljana Zalog",
+      "status": "Regular AWB RFC PaP",
+      "running_days": [
+        "Mo",
+        "Tu",
+        "We",
+        "Th",
+        "Fr",
+        "Sa",
+        "Su"
+      ],
+      "running_days_note": "Daily",
+      "stations": [
+        {
+          "name": "Ruma",
+          "country": "Serbia",
+          "im": "IZS",
+          "arrival": null,
+          "departure": "15:59",
+          "latitude": 44.9972,
+          "longitude": 19.8214
+        },
+        {
+          "name": "Šid",
+          "country": "Serbia",
+          "im": "IZS",
+          "arrival": "17:03",
+          "departure": "19:04",
+          "latitude": 45.1225,
+          "longitude": 19.2278
+        },
+        {
+          "name": "Tovarnik",
+          "country": "Croatia",
+          "im": "HZ-I",
+          "arrival": "19:14",
+          "departure": "21:10",
+          "latitude": 45.1556,
+          "longitude": 19.165
+        },
+        {
+          "name": "Zagreb RK",
+          "country": "Croatia",
+          "im": "HZ-I",
+          "arrival": "02:41+1",
+          "departure": "03:31+1",
+          "latitude": 45.815,
+          "longitude": 15.9819
+        },
+        {
+          "name": "Savski Marof",
+          "country": "Croatia",
+          "im": "HZ-I",
+          "arrival": null,
+          "departure": "04:11+1",
+          "latitude": 45.9011,
+          "longitude": 15.9731
+        },
+        {
+          "name": "Dobova",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "04:20+1",
+          "departure": "06:25+1",
+          "latitude": 45.9019,
+          "longitude": 15.6561
+        },
+        {
+          "name": "Ljubljana Zalog",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "08:03+1",
+          "departure": null,
+          "latitude": 46.0569,
+          "longitude": 14.5058
+        }
+      ]
+    },
+    {
+      "unique_id_direction": "AWB-BA-MED-NP7-ZgLj-SN",
+      "pap_id": "AWB-BA-MED-NP7-ZgLj",
+      "national_train_ids": {
+        "HZ-I": "70930",
+        "SZ-I": "60130"
+      },
+      "corridor": "AWB (RFC7) / RFC5 BA / RFC6 MED",
+      "direction": "S-N",
+      "origin": "Zagreb RK",
+      "destination": "Ljubljana Zalog",
+      "status": "Regular AWB RFC PaP (Joint offer with RFC BA and RFC MED)",
+      "running_days": [
+        "Su"
+      ],
+      "running_days_note": "Sunday only",
+      "stations": [
+        {
+          "name": "Zagreb RK",
+          "country": "Croatia",
+          "im": "HZ-I",
+          "arrival": null,
+          "departure": "08:27",
+          "latitude": 45.815,
+          "longitude": 15.9819
+        },
+        {
+          "name": "Savski Marof",
+          "country": "Croatia",
+          "im": "HZ-I",
+          "arrival": null,
+          "departure": "09:08",
+          "latitude": 45.9011,
+          "longitude": 15.9731
+        },
+        {
+          "name": "Dobova",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "09:17",
+          "departure": "10:36",
+          "latitude": 45.9019,
+          "longitude": 15.6561
+        },
+        {
+          "name": "Ljubljana Zalog",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "12:17",
+          "departure": null,
+          "latitude": 46.0569,
+          "longitude": 14.5058
+        }
+      ]
+    },
+    {
+      "unique_id_direction": "AWB-NP7-MaWe13-SN",
+      "pap_id": "AWB-NP7-MaWe13",
+      "national_train_ids": {
+        "SZ-I": "60101",
+        "OBB": "41404"
+      },
+      "corridor": "AWB (RFC7)",
+      "direction": "S-N",
+      "origin": "Maribor Tezno",
+      "destination": "Wels",
+      "status": "Regular AWB RFC PaP",
+      "running_days": [
+        "Mo",
+        "Tu",
+        "We",
+        "Th",
+        "Fr"
+      ],
+      "running_days_note": "Monday to Friday",
+      "stations": [
+        {
+          "name": "Maribor Tezno",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": null,
+          "departure": "12:30",
+          "latitude": 46.5456,
+          "longitude": 15.6811
+        },
+        {
+          "name": "Spielfeld",
+          "country": "Austria/Slovenia border",
+          "im": "OBB/SZ-I",
+          "arrival": "13:05",
+          "departure": "13:30",
+          "latitude": 46.7167,
+          "longitude": 15.6333
+        },
+        {
+          "name": "Wels CCT",
+          "country": "Austria",
+          "im": "OBB",
+          "arrival": "20:37",
+          "departure": null,
+          "latitude": 48.1667,
+          "longitude": 14.0333
+        }
+      ]
+    },
+    {
+      "unique_id_direction": "AWB-RD-NP7-LjSa15-SN",
+      "pap_id": "AWB-RD-NP7-LjSa15",
+      "national_train_ids": {
+        "SZ-I": "60120",
+        "OBB": "41820"
+      },
+      "corridor": "AWB (RFC7) / RFC RD",
+      "direction": "S-N",
+      "origin": "Ljubljana Moste",
+      "destination": "Salzburg Hbf.",
+      "status": "Regular AWB RFC PaP (Joint offer with RFC RD)",
+      "running_days": [
+        "Mo",
+        "Tu",
+        "We",
+        "Th",
+        "Fr"
+      ],
+      "running_days_note": "Monday to Friday",
+      "stations": [
+        {
+          "name": "Ljubljana Moste",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": null,
+          "departure": "20:27",
+          "latitude": 46.0569,
+          "longitude": 14.5058
+        },
+        {
+          "name": "Jesenice",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "21:47",
+          "departure": "22:14",
+          "latitude": 46.4339,
+          "longitude": 14.0572
+        },
+        {
+          "name": "Rosenbach",
+          "country": "Austria",
+          "im": "OBB",
+          "arrival": null,
+          "departure": "22:26",
+          "latitude": 46.5361,
+          "longitude": 13.9978
+        },
+        {
+          "name": "Salzburg Gnigl",
+          "country": "Austria",
+          "im": "OBB",
+          "arrival": "03:17+1",
+          "departure": "04:05+1",
+          "latitude": 47.8111,
+          "longitude": 13.0667
+        },
+        {
+          "name": "Salzburg Hbf",
+          "country": "Austria",
+          "im": "OBB",
+          "arrival": "04:09+1",
+          "departure": null,
+          "latitude": 47.8133,
+          "longitude": 13.0456
+        }
+      ]
+    },
+    {
+      "unique_id_direction": "AWB-BA-MED-NP7-ZgKo-SN",
+      "pap_id": "AWB-BA-MED-NP7-ZgKo",
+      "national_train_ids": {
+        "HZ-I": "N/A",
+        "SZ-I": "N/A"
+      },
+      "corridor": "AWB (RFC7) / RFC5 BA / RFC6 MED",
+      "direction": "S-N",
+      "origin": "Zagreb RK",
+      "destination": "Koper Tovorna",
+      "status": "Regular AWB RFC PaP (Joint offer with RFC BA and RFC MED)",
+      "running_days": [
+        "Mo",
+        "We",
+        "Fr"
+      ],
+      "running_days_note": "Monday, Wednesday, Friday",
+      "stations": [
+        {
+          "name": "Zagreb RK",
+          "country": "Croatia",
+          "im": "HZ-I",
+          "arrival": null,
+          "departure": "05:47",
+          "latitude": 45.815,
+          "longitude": 15.9819
+        },
+        {
+          "name": "Savski Marof",
+          "country": "Croatia",
+          "im": "HZ-I",
+          "arrival": null,
+          "departure": "06:27",
+          "latitude": 45.9011,
+          "longitude": 15.9731
+        },
+        {
+          "name": "Dobova",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "06:36",
+          "departure": "08:03",
+          "latitude": 45.9019,
+          "longitude": 15.6561
+        },
+        {
+          "name": "Ljubljana Zalog",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": null,
+          "departure": "13:10",
+          "latitude": 46.0569,
+          "longitude": 14.5058
+        },
+        {
+          "name": "Divača",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "14:59",
+          "departure": "15:09",
+          "latitude": 45.6836,
+          "longitude": 13.9664
+        },
+        {
+          "name": "Koper Tovorna",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "16:42",
+          "departure": null,
+          "latitude": 45.5542,
+          "longitude": 13.7378
+        }
+      ]
+    },
+    {
+      "unique_id_direction": "AWB-BA-MED-NP7-ZgLj-BA-SN",
+      "pap_id": "AWB-BA-MED-NP7-ZgLj",
+      "national_train_ids": {
+        "HZ-I": "N/A",
+        "SZ-I": "7SZ8"
+      },
+      "corridor": "AWB (RFC7) / RFC5 BA / RFC6 MED",
+      "direction": "S-N",
+      "origin": "Zagreb",
+      "destination": "Ljubljana",
+      "status": "Regular AWB RFC PaP (Joint offer with RFC BA and RFC MED)",
+      "running_days": null,
+      "running_days_note": "See source document for exact days",
+      "stations": [
+        {
+          "name": "Dobova",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "10:36",
+          "departure": "12:17",
+          "latitude": 45.9019,
+          "longitude": 15.6561
+        },
+        {
+          "name": "Ljubljana Zalog",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "12:17",
+          "departure": null,
+          "latitude": 46.0569,
+          "longitude": 14.5058
+        }
+      ]
+    },
+    {
+      "unique_id_direction": "CBANP024-SN",
+      "pap_id": "CBANP024",
+      "national_train_ids": {
+        "SZ-I": "7SZ1"
+      },
+      "corridor": "RFC5 Baltic-Adriatic",
+      "direction": "S-N",
+      "origin": "Koper Tovorna",
+      "destination": "Bohumin Vrbice",
+      "status": "Regular RFC5 BA PaP",
+      "running_days": [
+        "We",
+        "Th"
+      ],
+      "running_days_note": "Wednesday, Thursday",
+      "stations": [
+        {
+          "name": "Koper Tovorna",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": null,
+          "departure": "20:21",
+          "latitude": 45.5542,
+          "longitude": 13.7378
+        },
+        {
+          "name": "Divača",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "21:16",
+          "departure": "21:40",
+          "latitude": 45.6836,
+          "longitude": 13.9664
+        },
+        {
+          "name": "Ljubljana Severna",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": null,
+          "departure": "23:24",
+          "latitude": 46.0569,
+          "longitude": 14.5058
+        },
+        {
+          "name": "Maribor Tezno",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "01:33+1",
+          "departure": "03:21+1",
+          "latitude": 46.5456,
+          "longitude": 15.6811
+        },
+        {
+          "name": "Spielfeld",
+          "country": "Austria/Slovenia border",
+          "im": "OBB/SZ-I",
+          "arrival": "03:45+1",
+          "departure": null,
+          "latitude": 46.7167,
+          "longitude": 15.6333
+        }
+      ]
+    },
+    {
+      "unique_id_direction": "CBANP026-SN",
+      "pap_id": "CBANP026",
+      "national_train_ids": {
+        "SZ-I": "7SZ2"
+      },
+      "corridor": "RFC5 Baltic-Adriatic",
+      "direction": "S-N",
+      "origin": "Koper Tovorna",
+      "destination": "Dobra (Ostrava)",
+      "status": "Regular RFC5 BA PaP",
+      "running_days": [
+        "Tu",
+        "We",
+        "Fr",
+        "Su"
+      ],
+      "running_days_note": "Tuesday, Wednesday, Friday, Sunday",
+      "stations": [
+        {
+          "name": "Koper Tovorna",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": null,
+          "departure": "12:29",
+          "latitude": 45.5542,
+          "longitude": 13.7378
+        },
+        {
+          "name": "Divača",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "13:40",
+          "departure": "14:10",
+          "latitude": 45.6836,
+          "longitude": 13.9664
+        },
+        {
+          "name": "Ljubljana Zalog",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "16:11",
+          "departure": "17:48",
+          "latitude": 46.0569,
+          "longitude": 14.5058
+        },
+        {
+          "name": "Maribor Tezno",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "20:20",
+          "departure": "21:20",
+          "latitude": 46.5456,
+          "longitude": 15.6811
+        },
+        {
+          "name": "Spielfeld",
+          "country": "Austria/Slovenia border",
+          "im": "OBB/SZ-I",
+          "arrival": "21:43",
+          "departure": null,
+          "latitude": 46.7167,
+          "longitude": 15.6333
+        }
+      ]
+    },
+    {
+      "unique_id_direction": "CBANP028-SN",
+      "pap_id": "CBANP028",
+      "national_train_ids": {
+        "SZ-I": "7SZ3"
+      },
+      "corridor": "RFC5 Baltic-Adriatic",
+      "direction": "S-N",
+      "origin": "Koper Tovorna",
+      "destination": "Dunajská Streda",
+      "status": "Regular RFC5 BA PaP",
+      "running_days": [
+        "Mo",
+        "Tu",
+        "We",
+        "Th",
+        "Fr",
+        "Sa",
+        "Su"
+      ],
+      "running_days_note": "Daily",
+      "stations": [
+        {
+          "name": "Villa Opicina",
+          "country": "Italy",
+          "im": "RFI",
+          "arrival": null,
+          "departure": "14:15",
+          "latitude": 45.715,
+          "longitude": 13.8483
+        },
+        {
+          "name": "Koper Tovorna",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": null,
+          "departure": "11:40",
+          "latitude": 45.5542,
+          "longitude": 13.7378
+        },
+        {
+          "name": "Sežana",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "14:27",
+          "departure": "14:50",
+          "latitude": 45.7039,
+          "longitude": 13.8742
+        },
+        {
+          "name": "Divača",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "12:40",
+          "departure": "13:06",
+          "latitude": 45.6836,
+          "longitude": 13.9664
+        },
+        {
+          "name": "Ljubljana Zalog",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "16:39",
+          "departure": "17:16",
+          "latitude": 46.0569,
+          "longitude": 14.5058
+        },
+        {
+          "name": "Maribor Tezno",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "19:38",
+          "departure": "19:52",
+          "latitude": 46.5456,
+          "longitude": 15.6811
+        },
+        {
+          "name": "Spielfeld",
+          "country": "Austria/Slovenia border",
+          "im": "OBB/SZ-I",
+          "arrival": "20:37",
+          "departure": null,
+          "latitude": 46.7167,
+          "longitude": 15.6333
+        }
+      ]
+    },
+    {
+      "unique_id_direction": "BA-MED-NP7-KoZi-SN",
+      "pap_id": "BA-MED-NP7-KoZi",
+      "national_train_ids": {
+        "SZ-I": "7SZ4"
+      },
+      "corridor": "RFC5 BA / RFC6 MED",
+      "direction": "S-N",
+      "origin": "Koper Tovorna",
+      "destination": "Žilina",
+      "status": "Regular RFC5 BA / RFC6 MED Joint PaP",
+      "running_days": [
+        "We",
+        "Th",
+        "Fr",
+        "Sa",
+        "Su"
+      ],
+      "running_days_note": "Wednesday, Thursday, Friday, Saturday, Sunday",
+      "stations": [
+        {
+          "name": "Koper Tovorna",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": null,
+          "departure": "19:08",
+          "latitude": 45.5542,
+          "longitude": 13.7378
+        },
+        {
+          "name": "Divača",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "20:48",
+          "departure": "21:27",
+          "latitude": 45.6836,
+          "longitude": 13.9664
+        },
+        {
+          "name": "Ljubljana Zalog",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "23:24",
+          "departure": "23:43",
+          "latitude": 46.0569,
+          "longitude": 14.5058
+        },
+        {
+          "name": "Celje",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "01:02+1",
+          "departure": "02:00+1",
+          "latitude": 46.2308,
+          "longitude": 15.2681
+        },
+        {
+          "name": "Pragersko",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "02:41+1",
+          "departure": "03:09+1",
+          "latitude": 46.3956,
+          "longitude": 15.6644
+        },
+        {
+          "name": "Hodos",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "05:40+1",
+          "departure": null,
+          "latitude": 46.8197,
+          "longitude": 16.3261
+        }
+      ]
+    },
+    {
+      "unique_id_direction": "BA-MED-NP7-KoDu-SN",
+      "pap_id": "BA-MED-NP7-KoDu",
+      "national_train_ids": {
+        "SZ-I": "7SZ5"
+      },
+      "corridor": "RFC5 BA / RFC6 MED",
+      "direction": "S-N",
+      "origin": "Koper Tovorna",
+      "destination": "Dunajská Streda",
+      "status": "Regular RFC5 BA / RFC6 MED Joint PaP",
+      "running_days": [
+        "Mo",
+        "Tu",
+        "We",
+        "Th",
+        "Fr",
+        "Sa",
+        "Su"
+      ],
+      "running_days_note": "Daily",
+      "stations": [
+        {
+          "name": "Koper Tovorna",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": null,
+          "departure": "02:44",
+          "latitude": 45.5542,
+          "longitude": 13.7378
+        },
+        {
+          "name": "Divača",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": null,
+          "departure": "03:56",
+          "latitude": 45.6836,
+          "longitude": 13.9664
+        },
+        {
+          "name": "Ljubljana Zalog",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "05:59",
+          "departure": "06:46",
+          "latitude": 46.0569,
+          "longitude": 14.5058
+        },
+        {
+          "name": "Pragersko",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "09:05",
+          "departure": "09:14",
+          "latitude": 46.3956,
+          "longitude": 15.6644
+        },
+        {
+          "name": "Hodos",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "11:19",
+          "departure": null,
+          "latitude": 46.8197,
+          "longitude": 16.3261
+        }
+      ]
+    },
+    {
+      "unique_id_direction": "CBA-MED-NP030-SN",
+      "pap_id": "CBA-MED-NP030",
+      "national_train_ids": {
+        "SZ-I": "7SZ6"
+      },
+      "corridor": "RFC5 BA / RFC6 MED",
+      "direction": "S-N",
+      "origin": "Koper Tovorna",
+      "destination": "Dunajská Streda",
+      "status": "Regular RFC5 BA / RFC6 MED Joint PaP",
+      "running_days": [
+        "Mo",
+        "We"
+      ],
+      "running_days_note": "Monday, Wednesday",
+      "stations": [
+        {
+          "name": "Koper Tovorna",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": null,
+          "departure": "02:11",
+          "latitude": 45.5542,
+          "longitude": 13.7378
+        },
+        {
+          "name": "Divača",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "03:26",
+          "departure": "03:41",
+          "latitude": 45.6836,
+          "longitude": 13.9664
+        },
+        {
+          "name": "Ljubljana Zalog",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "05:44",
+          "departure": "05:52",
+          "latitude": 46.0569,
+          "longitude": 14.5058
+        },
+        {
+          "name": "Pragersko",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "08:41",
+          "departure": "09:21",
+          "latitude": 46.3956,
+          "longitude": 15.6644
+        },
+        {
+          "name": "Hodos",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "12:55",
+          "departure": null,
+          "latitude": 46.8197,
+          "longitude": 16.3261
+        }
+      ]
+    },
+    {
+      "unique_id_direction": "CBA-MED-NP032-SN",
+      "pap_id": "CBA-MED-NP032",
+      "national_train_ids": {
+        "SZ-I": "7SZ7"
+      },
+      "corridor": "RFC5 BA / RFC6 MED",
+      "direction": "S-N",
+      "origin": "Koper Tovorna",
+      "destination": "Dunajská Streda",
+      "status": "Regular RFC5 BA / RFC6 MED Joint PaP",
+      "running_days": [
+        "Mo",
+        "Tu",
+        "We",
+        "Th",
+        "Fr",
+        "Sa",
+        "Su"
+      ],
+      "running_days_note": "Daily",
+      "stations": [
+        {
+          "name": "Koper Tovorna",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": null,
+          "departure": "21:47",
+          "latitude": 45.5542,
+          "longitude": 13.7378
+        },
+        {
+          "name": "Divača",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "22:32",
+          "departure": "23:23",
+          "latitude": 45.6836,
+          "longitude": 13.9664
+        },
+        {
+          "name": "Ljubljana Zalog",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "01:18+1",
+          "departure": "02:16+1",
+          "latitude": 46.0569,
+          "longitude": 14.5058
+        },
+        {
+          "name": "Pragersko",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "04:08+1",
+          "departure": "04:30+1",
+          "latitude": 46.3956,
+          "longitude": 15.6644
+        },
+        {
+          "name": "Hodos",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "08:18+1",
+          "departure": null,
+          "latitude": 46.8197,
+          "longitude": 16.3261
+        }
+      ]
+    },
+    {
+      "unique_id_direction": "AWB-BA-MED-NP7-ZgLj-SN",
+      "pap_id": "AWB-BA-MED-NP7-ZgLj",
+      "national_train_ids": {
+        "SZ-I": "7SZ8",
+        "HZ-I": null
+      },
+      "corridor": "AWB (RFC7) / RFC5 BA / RFC6 MED",
+      "direction": "S-N",
+      "origin": "Zagreb",
+      "destination": "Ljubljana",
+      "status": "Regular AWB RFC PaP (Joint offer with RFC BA and RFC MED)",
+      "running_days": null,
+      "running_days_note": "See source document for exact days",
+      "stations": [
+        {
+          "name": "Dobova",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "10:36",
+          "departure": "12:17",
+          "latitude": 45.9019,
+          "longitude": 15.6561
+        },
+        {
+          "name": "Ljubljana Zalog",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "12:17",
+          "departure": null,
+          "latitude": 46.0569,
+          "longitude": 14.5058
+        }
+      ]
+    },
+    {
+      "unique_id_direction": "CBANP036-SN",
+      "pap_id": "CBANP036",
+      "national_train_ids": {
+        "SZ-I": "7SZ10"
+      },
+      "corridor": "RFC5 Baltic-Adriatic",
+      "direction": "S-N",
+      "origin": "Koper Tovorna",
+      "destination": "Sladkovicovo",
+      "status": "Regular RFC5 BA PaP",
+      "running_days": [
+        "Tu",
+        "Fr",
+        "Su"
+      ],
+      "running_days_note": "Tuesday, Friday, Sunday",
+      "stations": [
+        {
+          "name": "Koper Tovorna",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": null,
+          "departure": "20:21",
+          "latitude": 45.5542,
+          "longitude": 13.7378
+        },
+        {
+          "name": "Divača",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "21:16",
+          "departure": "21:40",
+          "latitude": 45.6836,
+          "longitude": 13.9664
+        },
+        {
+          "name": "Ljubljana Severna",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": null,
+          "departure": "23:24",
+          "latitude": 46.0569,
+          "longitude": 14.5058
+        },
+        {
+          "name": "Pragersko",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": null,
+          "departure": "01:19+1",
+          "latitude": 46.3956,
+          "longitude": 15.6644
+        },
+        {
+          "name": "Hodos",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "03:12+1",
+          "departure": null,
+          "latitude": 46.8197,
+          "longitude": 16.3261
+        }
+      ]
+    },
+    {
+      "unique_id_direction": "C6NPKOFE02-WE",
+      "pap_id": "C6NPKOFE02",
+      "national_train_ids": {
+        "SZ-I": null
+      },
+      "corridor": "RFC6 Mediterranean (East)",
+      "direction": "W-E",
+      "origin": "Koper Tovorna",
+      "destination": "Ferencváros",
+      "status": "Regular RFC6 PaP",
+      "running_days": [
+        "Mo",
+        "Tu",
+        "We",
+        "Th",
+        "Fr",
+        "Sa",
+        "Su"
+      ],
+      "running_days_note": "Daily",
+      "stations": [
+        {
+          "name": "Koper Tovorna",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": null,
+          "departure": "00:22",
+          "latitude": 45.5542,
+          "longitude": 13.7378
+        },
+        {
+          "name": "Ljubljana",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "03:45",
+          "departure": "04:10",
+          "latitude": 46.0569,
+          "longitude": 14.5058
+        },
+        {
+          "name": "Hodoš",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "08:51",
+          "departure": null,
+          "latitude": 46.8197,
+          "longitude": 16.3261
+        }
+      ]
+    },
+    {
+      "unique_id_direction": "C6NPKOFE04-WE",
+      "pap_id": "C6NPKOFE04",
+      "national_train_ids": {
+        "SZ-I": null
+      },
+      "corridor": "RFC6 Mediterranean (East)",
+      "direction": "W-E",
+      "origin": "Koper Tovorna",
+      "destination": "Ferencváros",
+      "status": "Regular RFC6 PaP",
+      "running_days": [
+        "Mo",
+        "Tu",
+        "We",
+        "Th",
+        "Fr",
+        "Sa",
+        "Su"
+      ],
+      "running_days_note": "Daily",
+      "stations": [
+        {
+          "name": "Koper Tovorna",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": null,
+          "departure": "08:12",
+          "latitude": 45.5542,
+          "longitude": 13.7378
+        },
+        {
+          "name": "Ljubljana",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "11:33",
+          "departure": "11:49",
+          "latitude": 46.0569,
+          "longitude": 14.5058
+        },
+        {
+          "name": "Hodoš",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "17:26",
+          "departure": null,
+          "latitude": 46.8197,
+          "longitude": 16.3261
+        }
+      ]
+    },
+    {
+      "unique_id_direction": "C6NPKOFE06-WE",
+      "pap_id": "C6NPKOFE06",
+      "national_train_ids": {
+        "SZ-I": null
+      },
+      "corridor": "RFC6 Mediterranean (East)",
+      "direction": "W-E",
+      "origin": "Koper Tovorna",
+      "destination": "Ferencváros",
+      "status": "Regular RFC6 PaP",
+      "running_days": [
+        "Mo",
+        "Tu",
+        "We",
+        "Th",
+        "Fr",
+        "Sa",
+        "Su"
+      ],
+      "running_days_note": "Daily",
+      "stations": [
+        {
+          "name": "Koper Tovorna",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": null,
+          "departure": "10:10",
+          "latitude": 45.5542,
+          "longitude": 13.7378
+        },
+        {
+          "name": "Ljubljana",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "13:17",
+          "departure": "13:54",
+          "latitude": 46.0569,
+          "longitude": 14.5058
+        },
+        {
+          "name": "Hodoš",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "20:51",
+          "departure": null,
+          "latitude": 46.8197,
+          "longitude": 16.3261
+        }
+      ]
+    },
+    {
+      "unique_id_direction": "C6NPKOFE08-WE",
+      "pap_id": "C6NPKOFE08",
+      "national_train_ids": {
+        "SZ-I": null
+      },
+      "corridor": "RFC6 Mediterranean (East)",
+      "direction": "W-E",
+      "origin": "Koper Tovorna",
+      "destination": "Ferencváros",
+      "status": "Regular RFC6 PaP",
+      "running_days": [
+        "Mo",
+        "Tu",
+        "We",
+        "Th",
+        "Fr",
+        "Sa",
+        "Su"
+      ],
+      "running_days_note": "Daily",
+      "stations": [
+        {
+          "name": "Koper Tovorna",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": null,
+          "departure": "10:20",
+          "latitude": 45.5542,
+          "longitude": 13.7378
+        },
+        {
+          "name": "Ljubljana",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "14:07",
+          "departure": "15:07",
+          "latitude": 46.0569,
+          "longitude": 14.5058
+        },
+        {
+          "name": "Hodoš",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "20:12",
+          "departure": null,
+          "latitude": 46.8197,
+          "longitude": 16.3261
+        }
+      ]
+    },
+    {
+      "unique_id_direction": "C6NPKOFE10-WE",
+      "pap_id": "C6NPKOFE10",
+      "national_train_ids": {
+        "SZ-I": null
+      },
+      "corridor": "RFC6 Mediterranean (East)",
+      "direction": "W-E",
+      "origin": "Koper Tovorna",
+      "destination": "Ferencváros",
+      "status": "Regular RFC6 PaP",
+      "running_days": [
+        "Mo",
+        "Tu",
+        "We",
+        "Th",
+        "Fr",
+        "Sa",
+        "Su"
+      ],
+      "running_days_note": "Daily",
+      "stations": [
+        {
+          "name": "Koper Tovorna",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": null,
+          "departure": "16:54",
+          "latitude": 45.5542,
+          "longitude": 13.7378
+        },
+        {
+          "name": "Ljubljana",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "20:12",
+          "departure": "20:44",
+          "latitude": 46.0569,
+          "longitude": 14.5058
+        },
+        {
+          "name": "Hodoš",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "01:10+1",
+          "departure": null,
+          "latitude": 46.8197,
+          "longitude": 16.3261
+        }
+      ]
+    },
+    {
+      "unique_id_direction": "C611KOZI02-WE",
+      "pap_id": "C611KOZI02",
+      "national_train_ids": {
+        "SZ-I": null
+      },
+      "corridor": "RFC6 / RFC11 Mediterranean (East)",
+      "direction": "W-E",
+      "origin": "Koper Tovorna",
+      "destination": "Žilina",
+      "status": "Regular RFC6 PaP",
+      "running_days": [
+        "Mo",
+        "Tu",
+        "We",
+        "Th",
+        "Fr",
+        "Sa",
+        "Su"
+      ],
+      "running_days_note": "Daily",
+      "stations": [
+        {
+          "name": "Koper Tovorna",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": null,
+          "departure": "19:17",
+          "latitude": 45.5542,
+          "longitude": 13.7378
+        },
+        {
+          "name": "Ljubljana",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "23:11",
+          "departure": "23:42",
+          "latitude": 46.0569,
+          "longitude": 14.5058
+        },
+        {
+          "name": "Hodoš",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "05:49+1",
+          "departure": "07:20+1",
+          "latitude": 46.8197,
+          "longitude": 16.3261
+        }
+      ]
+    },
+    {
+      "unique_id_direction": "C6NPFEKO01-EW",
+      "pap_id": "C6NPFEKO01",
+      "national_train_ids": {
+        "SZ-I": null
+      },
+      "corridor": "RFC6 Mediterranean (East)",
+      "direction": "E-W",
+      "origin": "Ferencváros",
+      "destination": "Koper Tovorna",
+      "status": "Regular RFC6 PaP",
+      "running_days": [
+        "Mo",
+        "Tu",
+        "We",
+        "Th",
+        "Fr",
+        "Sa",
+        "Su"
+      ],
+      "running_days_note": "Daily",
+      "stations": [
+        {
+          "name": "Hodoš",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": null,
+          "departure": "18:40",
+          "latitude": 46.8197,
+          "longitude": 16.3261
+        },
+        {
+          "name": "Ljubljana",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "23:16",
+          "departure": "00:36+1",
+          "latitude": 46.0569,
+          "longitude": 14.5058
+        },
+        {
+          "name": "Koper Tovorna",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "04:02+1",
+          "departure": null,
+          "latitude": 45.5542,
+          "longitude": 13.7378
+        }
+      ]
+    },
+    {
+      "unique_id_direction": "C6NPFEKO03-EW",
+      "pap_id": "C6NPFEKO03",
+      "national_train_ids": {
+        "SZ-I": null
+      },
+      "corridor": "RFC6 Mediterranean (East)",
+      "direction": "E-W",
+      "origin": "Ferencváros",
+      "destination": "Koper Tovorna",
+      "status": "Regular RFC6 PaP",
+      "running_days": [
+        "Mo",
+        "Tu",
+        "We",
+        "Th",
+        "Fr",
+        "Sa",
+        "Su"
+      ],
+      "running_days_note": "Daily",
+      "stations": [
+        {
+          "name": "Hodoš",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": null,
+          "departure": "02:09",
+          "latitude": 46.8197,
+          "longitude": 16.3261
+        },
+        {
+          "name": "Ljubljana",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "06:53",
+          "departure": "07:27",
+          "latitude": 46.0569,
+          "longitude": 14.5058
+        },
+        {
+          "name": "Koper Tovorna",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "10:13",
+          "departure": null,
+          "latitude": 45.5542,
+          "longitude": 13.7378
+        }
+      ]
+    },
+    {
+      "unique_id_direction": "C6NPFEKO05-EW",
+      "pap_id": "C6NPFEKO05",
+      "national_train_ids": {
+        "SZ-I": null
+      },
+      "corridor": "RFC6 Mediterranean (East)",
+      "direction": "E-W",
+      "origin": "Ferencváros",
+      "destination": "Koper Tovorna",
+      "status": "Regular RFC6 PaP",
+      "running_days": [
+        "Mo",
+        "Tu",
+        "We",
+        "Th",
+        "Fr",
+        "Sa",
+        "Su"
+      ],
+      "running_days_note": "Daily",
+      "stations": [
+        {
+          "name": "Hodoš",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": null,
+          "departure": "10:41",
+          "latitude": 46.8197,
+          "longitude": 16.3261
+        },
+        {
+          "name": "Ljubljana",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "15:19",
+          "departure": "17:00",
+          "latitude": 46.0569,
+          "longitude": 14.5058
+        },
+        {
+          "name": "Koper Tovorna",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "20:01",
+          "departure": null,
+          "latitude": 45.5542,
+          "longitude": 13.7378
+        }
+      ]
+    },
+    {
+      "unique_id_direction": "C116NPDSKO01-EW",
+      "pap_id": "C116NPDSKO01",
+      "national_train_ids": {
+        "SZ-I": null
+      },
+      "corridor": "RFC6 / RFC11 / RFC16 Mediterranean",
+      "direction": "E-W",
+      "origin": "Dunajska Streda",
+      "destination": "Koper Tovorna",
+      "status": "Regular RFC6 PaP",
+      "running_days": [
+        "Mo",
+        "Tu",
+        "We",
+        "Th",
+        "Fr",
+        "Sa",
+        "Su"
+      ],
+      "running_days_note": "Daily",
+      "stations": [
+        {
+          "name": "Hodoš",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "03:39",
+          "departure": "04:43",
+          "latitude": 46.8197,
+          "longitude": 16.3261
+        },
+        {
+          "name": "Ljubljana",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "09:15",
+          "departure": "11:02",
+          "latitude": 46.0569,
+          "longitude": 14.5058
+        },
+        {
+          "name": "Koper Tovorna",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "14:00",
+          "departure": null,
+          "latitude": 45.5542,
+          "longitude": 13.7378
+        }
+      ]
+    },
+    {
+      "unique_id_direction": "C116NPZIKO01-EW",
+      "pap_id": "C116NPZIKO01",
+      "national_train_ids": {
+        "SZ-I": null
+      },
+      "corridor": "RFC6 / RFC11 / RFC16 Mediterranean",
+      "direction": "E-W",
+      "origin": "Žilina",
+      "destination": "Koper Tovorna",
+      "status": "Regular RFC6 PaP",
+      "running_days": [
+        "Mo",
+        "Tu",
+        "We",
+        "Th",
+        "Fr",
+        "Sa",
+        "Su"
+      ],
+      "running_days_note": "Daily",
+      "stations": [
+        {
+          "name": "Hodoš",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "06:39",
+          "departure": "07:57",
+          "latitude": 46.8197,
+          "longitude": 16.3261
+        },
+        {
+          "name": "Ljubljana",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "13:28",
+          "departure": "14:44",
+          "latitude": 46.0569,
+          "longitude": 14.5058
+        },
+        {
+          "name": "Koper Tovorna",
+          "country": "Slovenia",
+          "im": "SZ-I",
+          "arrival": "18:42",
+          "departure": null,
+          "latitude": 45.5542,
+          "longitude": 13.7378
+        }
+      ]
+    }
+  ]
+}
