@@ -9,9 +9,10 @@
 </head>
 <body>
     <div id = "map" ></div>
+
     <script>
 
-        //setup for the map background
+        //setup za zemljevid
         var map = L.map('map').setView([46.0569, 14.5058], 9);
         var corner1 = [45.4, 13.3]
         var corner2 = [46.9, 16.6]   
@@ -20,12 +21,11 @@
         map.setMinZoom(8);
         map.setMaxZoom(14);
 
-        //tile layer, map background
         L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
             attribution: '&copy; OpenStreetMap & CARTO'
         }).addTo(map);
 
-        //stations for the map
+        //stations 
         const stations = [
             { name: "Ljubljana",              lat: 46.0569, lon: 14.5058 },
             { name: "Dobova",                 lat: 45.9019, lon: 15.6561 },
@@ -45,28 +45,47 @@
             L.marker([s.lat, s.lon]).addTo(map).bindPopup(s.name);
         });        
 
+        const LJ = [46.0569, 14.5058]; //ljubljana
+        const KP = [45.5542, 13.7378]; //koper
+        const DV = [45.6836, 13.9664]; //divaca
+        const CLJ = [46.2308, 15.2681]; //celje
+        const PRAG = [46.3956, 15.6644]; //pragersko
+        const HOD = [46.8197, 16.3261]; //hodos
+        const MAR = [46.5456, 15.6811]; //maribor
+        const SPIEL = [46.7167, 15.6333]; //spielfeld
+        const DOB = [45.9019, 15.6561]; //dobova
+        const JES = [46.4339, 14.0572]; //jesenice
+        const SEZ = [45.7039, 13.8742]; //sezana
+        const OPC = [45.7150, 13.8483]; //villa opcina?
+
+        // BALTIC-ADRIATIC
+        L.polyline([KP, DV, LJ, CLJ, PRAG, HOD], { color: 'blue', weight: 10 }).addTo(map);
+        L.polyline([PRAG, MAR, SPIEL], { color: 'blue', weight: 10 }).addTo(map);
+
+        // WEST BALKANS
+        L.polyline([KP, DV, LJ, DOB], { color: 'red', weight: 10 }).addTo(map);
+        L.polyline([JES, LJ, DOB], { color: 'orange', weight: 6 }).addTo(map);
+
+        // MEDITERRANEAN
+        L.polyline([KP, DV, SEZ, OPC], { color: 'green', weight: 6 }).addTo(map);
+        L.polyline([KP, DV, LJ, CLJ, PRAG, HOD], { color: 'green', weight: 6 }).addTo(map);
+        L.polyline([KP, SEZ, LJ], { color: 'green', weight: 6 }).addTo(map);
+        L.polyline([LJ, HOD], { color: 'green', weight: 6 }).addTo(map);
+
+        // thin on top
+        L.polyline([KP, DV, LJ, CLJ, PRAG, HOD], { color: 'blue', weight: 2 }).addTo(map);
+        L.polyline([PRAG, MAR, SPIEL], { color: 'blue', weight: 2 }).addTo(map);
+        L.polyline([KP, DV, LJ, DOB], { color: 'red', weight: 2 }).addTo(map);
+        L.polyline([JES, LJ, DOB], { color: 'orange', weight: 2 }).addTo(map);
+        L.polyline([KP, DV, SEZ, OPC], { color: 'green', weight: 2 }).addTo(map);
+        L.polyline([KP, DV, LJ, CLJ, PRAG, HOD], { color: 'green', weight: 2 }).addTo(map);
+
         let arrTime = 0;
         let depTime = 0;
         let travelTime = 0;
         const days = ['Su','Mo','Tu','We','Th','Fr','Sa'];       
         let trainMarkers = []; 
-        
-        //fill this with train lines, aquired using geojsonParser.py     
-        //fetch('./ref50.json').then(res => res.json()).then(data => {L.geoJSON(data).addTo(map);}); //random mala proga pri divaci
-        //fetch('./ref60.json').then(res => res.json()).then(data => {L.geoJSON(data).addTo(map);}); //sezana ljubljana skozi pivko
-        //fetch('./ref62.json').then(res => res.json()).then(data => {L.geoJSON(data).addTo(map);}); 
-        //fetch('./ref63.json').then(res => res.json()).then(data => {L.geoJSON(data).addTo(map);}); 
-        //fetch('./ref20.json').then(res => res.json()).then(data => {L.geoJSON(data).addTo(map);}); //samo zelezniska xv ljubljani
-        //fetch('./ref10.json').then(res => res.json()).then(data => {L.geoJSON(data).addTo(map);}); //iz kolodvor do zalog
-        //fetch('./ref14.json').then(res => res.json()).then(data => {L.geoJSON(data).addTo(map);}); //random frček pri radečah
-        //fetch('./ref35.json').then(res => res.json()).then(data => {L.geoJSON(data).addTo(map);}); //pri mariboru
-        //fetch('./ref30.json').then(res => res.json()).then(data => {L.geoJSON(data).addTo(map);}); //pragersko do meje z au
-        //fetch('./ref41.json').then(res => res.json()).then(data => {L.geoJSON(data).addTo(map);}); //ful ljutomer pa to
-        //fetch('./ref51.json').then(res => res.json()).then(data => {L.geoJSON(data).addTo(map);}); //malo pri divaci
-        //fetch('./ref40.json').then(res => res.json()).then(data => {L.geoJSON(data).addTo(map);}); //ptuj ormoz 1.1
-        //fetch('./ref44.json').then(res => res.json()).then(data => {L.geoJSON(data).addTo(map);}); //ormoz meja 1.2
-        //fetch('./ref45.json').then(res => res.json()).then(data => {L.geoJSON(data).addTo(map);}); //ptuj ovinek
-        
+         
         //updating positions
         fetch('./paps.json')
             .then(res => res.json())
@@ -81,7 +100,7 @@
                 weight: 2
             })
 
-            //${ss} insert variable here
+            //tle pomeni ${ss} insert variable here
             .bindPopup(`
                 Unique id: ${pap.pap_id}
                 Direction: ${pap.direction} 
@@ -90,15 +109,73 @@
             `)
             .addTo(map));
 
-            //we update once to make the dots show
+            // takoj enkrat poženemo
             updateTrains(data);
-            //we update it every 5 seconds
+            // potem pa vsake 15 sekund
             setInterval(() => updateTrains(data), 5000);
         });
 
+
         function updateTrains(data) {
-            //write the update train function here
+            console.log("updateTrains called, paps:", data.paps.length);
+
+            for (let i = 0; i < data.paps.length; i++) { //loop skozi route
+                var dayInWeek = days[new Date().getDay()];
+                var hourReal = new Date().getHours()
+                var minuteReal = new Date().getMinutes()
+                var secondReal = new Date().getSeconds() //to se updata usakic ko pridemo na nov pap ne stat
+                let realTimeInSeconds = hourReal*3600 + minuteReal*60 + secondReal
+
+                let firstBest = -1;
+                let secondBest = 86400; //second best time tistega papsa torej spodnja meja
+                let lowerJ = -1; 
+                let upperJ = -1 //index zg in sp meje
+
+                if (!data.paps[i].running_days || !data.paps[i].running_days.includes(dayInWeek)) {
+                    continue;
+                }
+                console.log("pap running today:", data.paps[i].pap_id, "realTime:", realTimeInSeconds);
+
+                for (let j = 0; j < data.paps[i].stations.length; j++) { //loop skozi statione enega routa
+                    console.log("lowerJ:", lowerJ, "upperJ:", upperJ, "firstBest:", firstBest, "secondBest:", secondBest);
+                    let sec = 0;
+                    let strarr = data.paps[i].stations[j].arrival
+                    let strdep = data.paps[i].stations[j].departure
+                    let timeStr = strdep ?? strarr; //fix ce arrival je null
+                    if (!timeStr) continue;
+
+                    const [hour, minute] = timeStr.split(":")
+
+                    if (timeStr.includes("+")) {
+                        const [minutes, extraday] = minute.split("+")    
+                        sec = Number(hour)*3600 + Number(minutes)*60 + 86400 //torej tle je nov dan 
+                    } else {
+                        sec = Number(hour) * 3600 + Number(minute)*60 //sekunde tega dneva
+                    }
+
+                    if (sec <= realTimeInSeconds && sec > firstBest) {
+                        firstBest = sec;
+                        lowerJ = j;
+                    }
+                    if (sec >= realTimeInSeconds && sec < secondBest) {
+                        secondBest = sec;
+                        upperJ = j;
+                    }
+
+                }
+
+                if (lowerJ !== -1 && upperJ !== -1) {
+                    let progress = (realTimeInSeconds - firstBest) / (secondBest - firstBest)
+                    let lat = data.paps[i].stations[lowerJ].latitude + (data.paps[i].stations[upperJ].latitude - data.paps[i].stations[lowerJ].latitude) * progress
+                    let lon = data.paps[i].stations[lowerJ].longitude + (data.paps[i].stations[upperJ].longitude - data.paps[i].stations[lowerJ].longitude) * progress
+                    trainMarkers[i].setLatLng([lat, lon]) 
+                    trainMarkers[i].setStyle({ fillOpacity: 1, opacity: 1 })
+                } else {
+                    trainMarkers[i].setStyle({ fillOpacity: 0, opacity: 0 })
+                }
+                //updatamo pikico vlaka
             }
+        }
             
     </script>
 </body>
