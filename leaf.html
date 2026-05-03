@@ -3,14 +3,12 @@
 <head>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@turf/turf@7/turf.min.js"></script> //turf.js will use for lines
     <style>
         #map {position: absolute; top: 0; bottom: 0; left: 0; right:0;}
     </style>
 </head>
 <body>
     <div id = "map" ></div>
-
     <script>
 
         //setup for the map background
@@ -53,9 +51,21 @@
         const days = ['Su','Mo','Tu','We','Th','Fr','Sa'];       
         let trainMarkers = []; 
         
-        //fill this with train lines, aquired using geojsonParser.py
-        fetch('./ref10.json').then(res => res.json()).then(data => {L.geoJSON(data).addTo(map);});
-        
+        //fill this with train lines, aquired using geojsonParser.py     
+        //fetch('./ref50.json').then(res => res.json()).then(data => {L.geoJSON(data).addTo(map);}); //random mala proga pri divaci
+        //fetch('./ref60.json').then(res => res.json()).then(data => {L.geoJSON(data).addTo(map);}); //sezana ljubljana skozi pivko
+        //fetch('./ref62.json').then(res => res.json()).then(data => {L.geoJSON(data).addTo(map);}); 
+        //fetch('./ref63.json').then(res => res.json()).then(data => {L.geoJSON(data).addTo(map);}); 
+        //fetch('./ref20.json').then(res => res.json()).then(data => {L.geoJSON(data).addTo(map);}); //samo zelezniska xv ljubljani
+        //fetch('./ref10.json').then(res => res.json()).then(data => {L.geoJSON(data).addTo(map);}); //iz kolodvor do zalog
+        //fetch('./ref14.json').then(res => res.json()).then(data => {L.geoJSON(data).addTo(map);}); //random frček pri radečah
+        //fetch('./ref35.json').then(res => res.json()).then(data => {L.geoJSON(data).addTo(map);}); //pri mariboru
+        //fetch('./ref30.json').then(res => res.json()).then(data => {L.geoJSON(data).addTo(map);}); //pragersko do meje z au
+        //fetch('./ref41.json').then(res => res.json()).then(data => {L.geoJSON(data).addTo(map);}); //ful ljutomer pa to
+        //fetch('./ref51.json').then(res => res.json()).then(data => {L.geoJSON(data).addTo(map);}); //malo pri divaci
+        //fetch('./ref40.json').then(res => res.json()).then(data => {L.geoJSON(data).addTo(map);}); //ptuj ormoz 1.1
+        //fetch('./ref44.json').then(res => res.json()).then(data => {L.geoJSON(data).addTo(map);}); //ormoz meja 1.2
+        //fetch('./ref45.json').then(res => res.json()).then(data => {L.geoJSON(data).addTo(map);}); //ptuj ovinek
         
         //updating positions
         fetch('./paps.json')
@@ -85,7 +95,6 @@
             //we update it every 5 seconds
             setInterval(() => updateTrains(data), 5000);
         });
-
 
         function updateTrains(data) {
             //write the update train function here
