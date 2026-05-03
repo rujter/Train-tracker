@@ -5,16 +5,16 @@ data = get_geojson()
 
 count = 0
 
-#ugotovi segmente in jih da v en list
+#ADDING SEGMENTS WITH THE SAME REFERENCE NUMBER INTO ONE LIST
 coordinates_list = []
 for feature in data['features']:
     ref = feature['properties'].get('ref') #ce j
     coords = feature['geometry'].get('coordinates')
-    if ref == '10':
+    if ref == '10': #ENTER HERE THE REFERENCE NUMBER YOU WANT TO PARSE
         coordinates_list.append(coords)
 
 
-#naredi dict z connectioni
+#MAKING A DICTIONARY OF THE TO-FROM NODES
 def round_point(p):
     return (round(p[0], 7), round(p[1], 7))
 
@@ -34,9 +34,7 @@ for a in range(len(coordinates_list)):
 
 print(connections)
 
-
-#zdej moram najt val, ki je kot key ma nikoli kot val
-
+#WE FIND THE NODE THAT IS A FROM NODE, BUT NOT A TO NODE
 start = 0
 
 fromL = list(connections.keys())
@@ -53,18 +51,16 @@ for i in range(len(fromL)):
     if isStart == True:
         start= fromL[i]
         break 
-        #key je ta first val ta drug
 
-#zdej je start ta ki je key, ni pa val
 
-#moramo orderat koncno
+#WE ORDER THE TO-FROM VALUES, WITH THE ONE THAT IS A TO NODE AS THE FIRST
 ordered = [start]
 current = start
 while current in connections:
     current = connections[current]
     ordered.append(current)
 
-
+#OUTPUT FOR GEOJSON FORMAT
 output = {
     'type': 'Feature',
     'properties': {'ref': '10'},
@@ -74,5 +70,6 @@ output = {
     }
 }
 
-with open('ref10.json', 'w') as f:
+#MAKING A NEW FILE
+with open('ref10.json', 'w') as f: #ENTER HERE THE NAME OF THE NEW JSON FILE, IT HAS TO BE THE SAME AS THE TOP INPUT
     json.dump(output,f,indent=2)
