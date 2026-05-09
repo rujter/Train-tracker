@@ -29,8 +29,7 @@ run python main.py
 Extras:
 I included the geojsonLoader.py and geojsonParser.py. While downloading OverpassAPI railway data it sometimes happens that, mimicking real life, we get parallel railways, one going each way. Should we want to chain them in a straight line for the train location predictor to work, we have to order their coordinates in a straight line, because the coordinates pulled from OverpassAPI aren't ordered. But during the ordering process it sometimes happens that the parser takes the other railways coordinates and orders them as the railway we want. This is why we have to add the start latitude in the code manually, so it chains the right side of the railway together.
 
-Status:
-Map and approximate positions of train tracks for the European freight train corridors passing through Slovenia
+I also included geojson files including sorted coordinates of the main slovenian freight corridors
 
 To do (work in progress):
 More accurate train tracks fixed on their real positions
